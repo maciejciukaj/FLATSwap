@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  flatswap:
+    build:
+      context: .
+      dockerfile: FlatSwap/Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - ConnectionStrings__DefaultConnection=Host=db;Port=5432;Database=flatswapdb;Username=flatswap;Password=flatswap
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: flatswap
+      POSTGRES_PASSWORD: flatswap
+      POSTGRES_DB: flatswapdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
