@@ -8,16 +8,16 @@ services:
     ports:
       - "8080:8080"
     environment:
-      - ConnectionStrings__DefaultConnection=Host=db;Port=5432;Database=flatswapdb;Username=flatswap;Password=flatswap
+      - ConnectionStrings__DefaultConnection=Host=${DB_HOST};Port=${DB_PORT};Database=${DB_NAME};Username=${DB_USER};Password=${DB_PASSWORD}
     depends_on:
       - db
 
   db:
     image: postgres:15
     environment:
-      POSTGRES_USER: flatswap
-      POSTGRES_PASSWORD: flatswap
-      POSTGRES_DB: flatswapdb
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
     ports:
       - "5432:5432"
     volumes:
