@@ -39,5 +39,5 @@ jobs:
           curl -X POST \
           -H "Accept: application/json" \
           -H "Authorization: Bearer $RENDER_API_KEY" \
-          -d '{"serviceId": "YOUR_RENDER_SERVICE_ID", "clearCache": false}' \
+          -d '{"serviceId": "srv-csp54lbtq21c73c7dc3g", "clearCache": false}' \
           https://api.render.com/v1/services/srv-csp54lbtq21c73c7dc3g/deploys
