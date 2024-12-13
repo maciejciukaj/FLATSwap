@@ -10,7 +10,7 @@ def transcription_service(audio_file_name):
     result_file_path = os.path.join(base_path, "Results", f"{audio_file_name}")
     model = load_model()
     result  = model.transcribe(f"{audio_file_path}.wav", language="en", task="transcribe", without_timestamps=True)
-    print(result)
+
     print(result["text"])
     print(words_to_numbers(result["text"]))
 
@@ -20,5 +20,3 @@ def transcription_service(audio_file_name):
         f.write(result["text"])
 
     print(f"Transcription saved in: {result_file}")
-
-print(transcription_service("rus_2024-12-10T15_31_55Z_12139.0kHz"))
