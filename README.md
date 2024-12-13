@@ -1,6 +1,6 @@
 # FLATswap Project - Transcribing Number Station Transmissions
 
-Welcome to **FLATswap**, a comprehensive platform designed to transcribe and analyze voice transmissions from number stations. This project focuses on automating the process of converting spoken numeric transmissions into text format, storing them for archival purposes, and providing a web interface for research.
+Welcome to **FLATswap** (Frequency Listening and Automated Transcription System with Archival Processing), a comprehensive platform designed to transcribe and analyze voice transmissions from number stations. This project focuses on automating the process of converting spoken numeric transmissions into text format, storing them for archival purposes, and providing a web interface for research.
 
 ---
 
