@@ -24,23 +24,3 @@ def compare_sequences(seq1_str, seq2_str):
         "differences": differences,
         "extra_elements": extra_elements
     }
-
-
-result_path = "result.txt"
-expected_path = "Tests/test_data/expected.txt"
-
-actual = clean_sequence(result_path)
-expected = clean_sequence(expected_path)
-
-comparison_result = compare_sequences(actual, expected)
-
-if not comparison_result["differences"] and not comparison_result["extra_elements"]:
-    print("Strings are the same.")
-else:
-    print("Różnice:")
-    for diff in comparison_result["differences"]:
-        print(f"Indeks: {diff['index']}, actual: {diff['seq1']}, expected: {diff['seq2']}")
-
-    if comparison_result["extra_elements"]:
-        print("\nAdditional elements:")
-        print(f"{comparison_result['extra_elements']['longer_sequence']}: {comparison_result['extra_elements']['extra_elements']}")
