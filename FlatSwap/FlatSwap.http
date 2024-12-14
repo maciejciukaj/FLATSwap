@@ -1,6 +1,0 @@
-@FlatSwap_HostAddress = http://localhost:5143
-
-GET {{FlatSwap_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
