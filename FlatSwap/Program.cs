@@ -1,4 +1,7 @@
 
+using FlatSwap.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace FlatSwap
 {
     public class Program
@@ -6,6 +9,9 @@ namespace FlatSwap
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddDbContext<AppDbContext>(options =>
+                 options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             // Add services to the container.
 
