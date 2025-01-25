@@ -13,5 +13,12 @@ def words_to_numbers(input_string):
     }
 
     words = input_string.lower().replace(",", " ").split()
-    digits = [word_to_digit[word] if word in word_to_digit else word for word in words if word in word_to_digit or word.isdigit()]
-    return ' '.join(digits)
+
+    result = []
+    for word in words:
+        if word in word_to_digit:
+            result.append(word_to_digit[word])
+        elif word.isdigit():
+            result.append(word)
+
+    return ' '.join(result)
