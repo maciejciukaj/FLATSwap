@@ -1,6 +1,6 @@
 import os
 
-from compare_result import clean_sequence, compare_sequences
+from Utils.compare_result import clean_sequence, compare_sequences
 
 
 def test_compare_sequences():
