@@ -8,6 +8,8 @@
 
         public required string Country { get; set; }
 
+        public string? Description { get; set; }
+
         public ICollection<Transcription> Transcriptions { get; set; } = new List<Transcription>();
     }
 }
