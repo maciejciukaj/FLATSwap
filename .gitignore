@@ -7,3 +7,4 @@
 /backend/FlatSwap/appsettings.Development.json
 /obj
 /backend/FlatSwap/Migrations
+/listener-transcriber/.env
